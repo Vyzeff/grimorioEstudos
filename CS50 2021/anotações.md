@@ -71,23 +71,13 @@ Aquilo que realiza o processo de [sourceCode] -----> [machineCode]
 - Terminal
 A janela que uma pessoa usa para interagir com o computador através do input de comandos. Exemplos são o cmd e o próprio Git.
 
-- ./hello e outros comandos
-[make] = procura o compiler para um arquivo .c ou outro atualmente em uso e o compila
-[.] = dentro do diretorio atual
-[/hello] = executa ou abre o arquivo nomeado
-[rm] = remove um arquivo
-[ls] = lista os arquivos do diretorio atual
-[/n] = nova linha
-[%s] = um placeholder para strings, como printf("Olá, %s/n", nome);
-
-- printf
-Equivalente ao [print()] do python.
-printf("Olá");
-
 - Funções, num geral
 tem dois possiveis finais:
 um efeito = algo aparece na tela, um texto, um número, som imagem, etc
 um retorno = retorna um valor, uma variavel, como um resultado de pesquisa, uma solução matemática, que pode então ser reusado(como um input, onde o valor inputado fica salvo)
+Em C, uma função pode ser definida como:
+<void meow(void)>
+isto é, uma função que não retorna nada ou um tipo de data, por isso o void no começo, e no momento ela não tem qualquer input, por isso o (void)
 
 - #include
 equivalente ao import do python, esse comando importa alguma coisa de bancos de funções.
@@ -96,3 +86,36 @@ equivalente ao import do python, esse comando importa alguma coisa de bancos de 
 
 - Essencial para o C
 Para qualquer arquivo .c, é necessário: <int main(void)>
+
+# Comandos e Mais
+
+- ./ e outros comandos
+[make] = procura o compiler para um arquivo .c ou outro atualmente em uso e o compila
+[.] = dentro do diretorio atual
+[..] = "sobe" um diretorio do terminal
+[/] = executa ou abre o arquivo nomeado
+[rm] = remove um arquivo
+[ls] = lista os arquivos do diretorio atual
+[mv] = "move" move algum arquivo a algum diretório
+[mkdir] = "make directory" cria um diretório
+[cd] = "change directory" muda o diretório do terminal
+[code] = cria um arquivo
+[/n] = nova linha
+[%s] = um placeholder para strings, como printf("Olá, %s/n", nome);
+[||] = ou
+[&&] = e
+[printf] = equivalente ao print() do phyton
+
+- Prefixos e mais
+[bool] = true or false
+[char] = um único caractére
+[double] = mais precisao que float
+[float] = numero real, com numero decimal
+[int] = números simples
+[long] = um grande int
+[string] = letras e alfabeto
+[+] = soma
+[-] = subtrai
+[/] = divide
+[*] = multiplica
+[%] = divite até o resto
