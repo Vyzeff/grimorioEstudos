@@ -12,22 +12,28 @@ base 2:
     mas 010 = 2
     até 111 = 7, ad infinitun
 transistores, ligado(1) ou desligado(0)
+
 - No final do dia, a gente transforma letras e coisas que nos podemos entender em números, de uma maneira unificada. 
 Exemplo, em todos os pcs do mundo, A = 01000001
 diferenças no modo de como coisas são representadas, para que o numero 65(01000001) ainda seja usado e não confundido com A se dão através dos formatos de arquivos, de txt, md, até py ou exe e PNG
 >computadores são muito dependentes de contexto
+
 - Bit seria a menor unidade do computador, uma unidade de 0
     byte = 8 bits
 ASCII é o modelo padrão de bits para letras, mas é preso a 255 caracteres
 Unicode é uma superposição de ASCII com muito mais opções, de 8 bits do ASCII até 16 ou 32, até um máximo de 4 bilhoes de combinações 
+
 - RGB --> mistura de red, green e blue que formam basicamente todas as cores que vemos através de pixels. 
 Cada cor leva 8 bits, e pode ser contada até um máximo de 255 para uma maior intensidade, e cada pixel é uma mistura desses valores para uma definida cor.
+
 - Um video é basicamente uma série de imagens sendo passadas muito rapido, o FPS(Frames Per Second) representa exatamente isso
 Para aúdio, por meio do formato MIDI, por exemplo, representa notas músicais como números.
+
 - Hoje em dia, para filmes e arquivos maiores, usar esse metodo de imagem por imagem seria muito díficil.
 Então através de sofwares, matemática e compressão, representamos os mesmos valores de imagens, sons e mais em um tamanho menor.
 Lossless =  compressão sem perda de data
 lossy = compressao com alguma perda de qualidade, audio pior ou imagens pixeladas.
+
 - Algoritmos
 Passo a passos de instruções para uma finalidade
 correto =! eficiente
@@ -36,7 +42,57 @@ n = t, uma relação de 1 pra 1 para dados e esforço
 n/2 = t, para cada 1 dado, .5 esforço
 log2n = t, para cada log2n
 quanto menor redundância, melhor
+
 - Pseudocode
 não é codigo, mas uma maneira de se expressar(linha 34)
+
 - Abstração
 classes e objetos, criar definições humanas através de codigo. Uma ação como "meow" pode ser uma função complexa, mas com um nome reconhecivel.
+
+
+# Lesson 2 - C
+> correctness, style, design
+
+- IDEs
+Integrated Development Environment, ou, Editores de Texto, são os "lugares" proprios para a criação de programas, uma vez que não nem o foco estético que outros aplicativos como Google Docs tem, e sim foco na funcionalidade.
+
+- C
+Um documento .c define o contexto da linguagem C
+>#include <stdio.h>
+>
+>int main(void)
+>{
+>    printf("hello, world\n");
+>}
+
+- Compiler
+Aquilo que realiza o processo de [sourceCode] -----> [machineCode] 
+
+- Terminal
+A janela que uma pessoa usa para interagir com o computador através do input de comandos. Exemplos são o cmd e o próprio Git.
+
+- ./hello e outros comandos
+[make] = procura o compiler para um arquivo .c ou outro atualmente em uso e o compila
+[.] = dentro do diretorio atual
+[/hello] = executa ou abre o arquivo nomeado
+[rm] = remove um arquivo
+[ls] = lista os arquivos do diretorio atual
+[/n] = nova linha
+[%s] = um placeholder para strings, como printf("Olá, %s/n", nome);
+
+- printf
+Equivalente ao [print()] do python.
+printf("Olá");
+
+- Funções, num geral
+tem dois possiveis finais:
+um efeito = algo aparece na tela, um texto, um número, som imagem, etc
+um retorno = retorna um valor, uma variavel, como um resultado de pesquisa, uma solução matemática, que pode então ser reusado(como um input, onde o valor inputado fica salvo)
+
+- #include
+equivalente ao import do python, esse comando importa alguma coisa de bancos de funções.
+[stdio.h] = printf e input e output num geral
+[cs50.h] = algumas funções que não vem com C normalmente, como [get_string]
+
+- Essencial para o C
+Para qualquer arquivo .c, é necessário: <int main(void)>
