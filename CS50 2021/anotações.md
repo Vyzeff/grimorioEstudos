@@ -87,6 +87,11 @@ equivalente ao import do python, esse comando importa alguma coisa de bancos de 
 - Essencial para o C
 Para qualquer arquivo .c, é necessário: <int main(void)>
 
+- Floating-Point Imprecision
+Fundamentalmente, computadores não são capazes de computar um numero infinito de números uma vez que tem uma capacidade finita de armazenamento e, especificamente, bits.
+
+- Int/int
+dividir um interger por um interger devolve um interger, isto é, não é possível ter números decimais num processo chamado "truncação"(truncated)
 # Comandos e Mais
 
 - ./ e outros comandos
