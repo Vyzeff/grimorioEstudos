@@ -50,7 +50,7 @@ não é codigo, mas uma maneira de se expressar(linha 34)
 classes e objetos, criar definições humanas através de codigo. Uma ação como "meow" pode ser uma função complexa, mas com um nome reconhecivel.
 
 
-# Lesson 2 - C
+# Lesson 1 - C
 > correctness, style, design
 
 - IDEs
