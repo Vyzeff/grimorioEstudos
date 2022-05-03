@@ -99,7 +99,24 @@ dividir um interger por um interger devolve um interger, isto é, não é possí
 - Clang
 ao usar $ make, não usamos o compiler por si so, mas uma ferramenta que busca ele. O compiler é chamado de Clang. Sem mais comandos, Clang não busca as bibliotecas como <stdio.h> ou <cs50.h> Serie necessário o comando -lcs50 para utilizar as funções de cs50. Make somente ajuda e deixa o processo automático. Até mesmo para nomear o arquivo seria preciso o comando -o "nome". -l significa "link"
 
--
+- Compile
+Normalmente pensamos que compilar é so uma coisa, mas o pc em questão realiza ao menos 4 ações:
+.preprocessamento: processa linhas #, como bibliotecas, e "pega" os prototipos de funções
+.compilando: transforma a linguagem em "assembly language", muito difícil de entender
+.assembling: a assembly language é transformada em binario
+.linking: junta todas as bibliotecas de codigos em uma coisa só
+
+- Debugging
+use printf ao seu favor. debug50 é usavel, ele passa pelo código linha por linha, e você pode parar a hora que quiser.
+
+- RAM
+Random Access Memory.
+
+- Arrays 
+Uma variavel que mantem varias outras variaveis do mesmo tipo dentro de si. Usa []. Começa a contar do 0. Então um array de 3 variaveis contaria 0, 1, 2. Strings, por exemplo, são simplesmente arrays de char, sendo possivel a expressao printf("%i %i %i", s[0], s[1], s[2]) onde s seria "HI!".
+
+- strlr
+atraves da #string.h, essa função basicamente descobre a lenght de uma string.
 
 # Comandos e Mais
 
