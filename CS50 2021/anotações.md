@@ -92,6 +92,15 @@ Fundamentalmente, computadores não são capazes de computar um numero infinito 
 
 - Int/int
 dividir um interger por um interger devolve um interger, isto é, não é possível ter números decimais num processo chamado "truncação"(truncated)
+
+
+# Lesson 2 - Arrays
+
+- Clang
+ao usar $ make, não usamos o compiler por si so, mas uma ferramenta que busca ele. O compiler é chamado de Clang. Sem mais comandos, Clang não busca as bibliotecas como <stdio.h> ou <cs50.h> Serie necessário o comando -lcs50 para utilizar as funções de cs50. Make somente ajuda e deixa o processo automático. Até mesmo para nomear o arquivo seria preciso o comando -o "nome". -l significa "link"
+
+-
+
 # Comandos e Mais
 
 - ./ e outros comandos

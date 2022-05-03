@@ -1,0 +1,88 @@
+/* Layout */
+html {
+  color: #3C3C3B
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #3C3C3B
+}
+.main {
+    display: flex;
+    padding: 3em;
+    height: 90vh;
+    justify-content: center;
+    align-items: middle;
+    background-color: #3C3C3B;
+}
+
+.clockbox,
+#clock {
+    width: 100%;
+}
+
+/* Clock styles */
+#clock {
+  opacity: 0.7;
+}
+.circle, .hour-marks, .hour-arm, .minute-arm, .second-arm {
+  fill: none;
+  stroke: #84BC92;
+}
+.circle {
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.mid-circle {
+    fill: #84BC92;
+}
+.hour-marks {
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.hour-arm {
+    stroke-width: 17;
+    stroke-miterlimit: 10;
+}
+
+.minute-arm {
+    stroke-width: 11;
+    stroke-miterlimit: 10;
+}
+
+.second-arm {
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+/* Transparent box ensuring arms center properly. */
+.sizing-box {
+    fill: none;
+}
+
+/* Make all arms rotate around the same center point. */
+/* Optional: Use transition for animation. */
+#hour,
+#minute,
+#second {
+    transform-origin: 300px 300px;
+    transition: transform .5s ease-in-out;
+}
+
+.textime {
+  /* position: relative;
+  left: 43%;
+  bottom: 10%; */
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 3em;
+  color: #84BC92;
+  opacity: 0.7;
+  padding: 2px;
+}
+.align {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
