@@ -118,6 +118,42 @@ Uma variavel que mantem varias outras variaveis do mesmo tipo dentro de si. Usa 
 - strlr
 atraves da #string.h, essa função basicamente descobre a lenght de uma string.
 
+# Lesson 3 - Algorithms
+> Input ----> Algorithm ------> Output
+
+- Correctness != Effective
+Um melhor design deixa um codigo mais facil de se ler, e principalmente eficiencia. Menos redundancia, menos memória.
+
+- Big O
+Essencialmente o número de "passos" de um algoritimo. O(n) seria um numero de passos da ordem n, e em grandes quantidades, como bytes, 2n ou n/4 não fazem tanta diferença. Quanto menor o n melhor, já que a função é mais rápida.
+
+- Omega
+O melhor caso do algoritmo, enquanto o big O seria o máximo de tempo. Theta é quando ambos omega e big o são o mesmo, isto é, o algoritmo é constante não importa o input.
+
+- Linear Search
+Quando os characteres são checados um por vez, em ordem. Apesar de não ser o mais eficiente em muitos casos, numa situação onde não se tem informação nenhuma sobre ordem ou algo do tipo, por exemplo num array de números aleatório, Linear Search bem eficiente.
+
+- Binary Search
+Quando se tem a informação de que os números estão ordenados de alguma forma, maior para o menor ou qualquer outra, o metodo binario é mais eficiente. Nele, se pega o meio do array e se vai divindo em 2 até encontrar o caractere desejado, despejando a outra metade sempre que o número estiver em outra.
+
+- Data Structures
+Coisas como char, int e float são estruturas de dados ja feitos na propria linguagem C, e é possivel criar outros tipos de estruturas atraves do comando typedef struc
+
+- person people.name[0]
+A sintaxe "." funciona para "entrar" dentro de algo e acessar alguma coisa. Nesse caso, o array people de tipo "person" tem imbutido nele o aspecto name, o qual é possivel acessar e editar com o ".". "name" está encapsulado dentro de people.
+
+- Selection Sort
+Seleciona um caractere e o muda com outro, um por um, até a ordem desejada. Tem uma Big O de (n²/2 + n/2), ou simplesmente Big O(n²), enquanto o Omega(n²)
+
+- Bubble Sort
+Troca a posição de 2 caracteres em memoria até eventualmente chegar em ordem. Seu Big O(n²) ainda é grande, enquanto seu Omega(n).
+
+- Recursion
+Uma coisa definida por ela mesma. Por exemplo, uma função chamar a ela mesma em sua função.
+
+- Merge Sort
+A junção de duas metades. Sua Big O(logn), consideravelmenta mais rápido, enquanto Omega()
+
 # Comandos e Mais
 
 - ./ e outros comandos
