@@ -154,6 +154,40 @@ Uma coisa definida por ela mesma. Por exemplo, uma função chamar a ela mesma e
 - Merge Sort
 A junção de duas metades. Sua Big O(logn), consideravelmenta mais rápido, enquanto Omega()
 
+# Lesson 4 - Memory
+>Sistemas finitos podem armazenas quantidades finitas de informação
+
+- RGB
+6 valores númericos que juntos definem uma cor em um determinado lugar. Por exemplo, com o código hexadecimal #FFFFFF, temos branco, ou com R 255 G 255 B 255, tambem temos branco.
+
+- Codigo #
+A base hexadecimal, muito usada para cores como #FB68F3, vai de 0-9, como a base decimal, mas adiciona as letras A-F a equação. O número FF representa 255 na base 10, o que salva um espaço concideravel conforme os números vão ficando maiores. Um F reprenta os primeiros 4 bits de um byte, enquanto outro F representa os outros 4. No mundo da programação, o a notação 0x significa que o que vem depois dela é um numero hex. 0x10 não representa 10 na base decimal, mas 16.
+
+- Pointers
+O "endereço" de variaveis e mais na memoria do pc. Numa variavel, usando &n, para uma variavel n, é possivel descobrir o local onde os bits dessa variavel estão, e se necessário, para armazenar esse local em outra variavel, é utilizado "*nomedavariavel"
+Exemplo: int n = 50; int *p = &n;. Ou: printf("%i\n", *n)
+
+- Strings
+Em sua essencia, uma string é um pointer para o primeiro de uma série de valores, como 0x123 até 0x126 que então é finalizada com um null. Logo, uma string s = "hi!" na verdade é char *s = "hi!"
+O tempo todo, dentro da biblioteca <cs50.h>, estava "typedef char *string".
+
+- Dynamic Memory Allocation
+free e malloc. Malloc se refere a memory allocation, isto é, você pode dar mais memoria, bytes, para uma determinada função, enquanto free seria o oposto, você estaria liberando memoria daquele sistema. Se não existe memoria o sufiente para a ação, sera retornado um valor de NULL
+
+- Buffer Overflow
+Quando memória é acessada que não deveria ser. Fora de um pedaço de data ja alocado por malloc.
+
+- Valgrind
+Um comando que é usado no terminal como "valgrind ./...". É usado para verificar erros de memória, como leaks de memoria, ou acesso incorreto.
+
+- Garbage Values
+Quando uma variavel é iniciada mas não tem seu valor definido, é possivel que nela existam "garbage values", isto é, restos de data que ja foram usados e não tem mais valor.
+
+- Na Memória, existe uma ordem para o armazenamento de bits
+A ordem é essa: Machine Code, o codigo compilado -----> Globais, variaveis globais -----> heap -----> stack, onde stack é usado a maioria do tempo. Stack Overflow é quando se é usado muito da memoria stack e ela colide com a heap ou outra dela.
+
+# Lesson 5 - Memory
+
 # Comandos e Mais
 
 - ./ e outros comandos
