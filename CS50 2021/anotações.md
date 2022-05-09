@@ -188,6 +188,31 @@ A ordem é essa: Machine Code, o codigo compilado -----> Globais, variaveis glob
 
 # Lesson 5 - Memory
 
+- int list = malloc(4 * sizeof(int)) != int list[3]
+Enquanto ambos os comandos acima realizam um array de mesmo tamanho, o primeiro comando cria um array dinamico, onde futuramente é possivel aumenta-lo ou diminui-lo atraves de mudanças do malloc e do comando free, por conta de esse array estar localizado na memoria heap. O segundo comando, mesmo criando um array igual, tem um tamanho fixo, onde não é possivel mudar ele alem de criar outro array completamente diferente, assim então essencialmente um disperdicio de memória.
+
+- Realloc
+Realoca memoria, por exemplo, pode mudar automaitcamente um array de tamanho 3 para um de tamanho 4 atraves de realloc(list, 4 * sizeof(int))
+
+- Linked List
+A data não fica necessariamente do lado uma a outra na memoria do computador, linkded lists são exatamente isso, onde cada numero, ou pedaço de data não precisa ficar junto ao proximo, mas sim somente apontar para onde o seguinte esta. Esse metodo usa mais memória mas é consideravelmente mais rápido.
+
+- Garbage Values e Null
+Ao iniciar algo, como uma lista ou qualuqer outra função ou estrutura de data, melhor do que deixar ela vazia, como <node *list;>, o ideal é definir um valor a ela, para que a memória usada não seja definida como lixo. Assim, <node *list = NULL> é melhor.
+
+- Trees
+Uma linked list bidimencional. Cada node poderia apontar para não um local, mas dois.
+
+- Hash Table
+Um array de linked lists, por exemplo, onde um determinado pointer leva a um usuario com senha e mais. Mesmo com um Big O(n), na prática, atraves dela se tem resultados mais rápidos do que uma linked list normal.
+
+- Trie
+Uma tree de arrays. Onde cada node aponta para outro array de nodes e assim sucessivamente. Mesmo 
+usando uma quantidade grande de memoria, ao chegar a quantidades massivas de dados, o Big O é constante em 1.
+
+- Queue
+FIFO --> First In, First Out.
+LIFO ---> Last In, First Out.
 # Comandos e Mais
 
 - ./ e outros comandos
