@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    {% if transaction == True %}
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            Transaction complete!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endif %}
+    <table class="table table-striped table-hover">
+        <caption>Your Digital Wallet</caption>
+        <thead>
+          <tr>
+            <th scope="col" class="text-start">Symbol</th>
+            <th scope="col" class="text-start">Name</th>
+            <th scope="col" class="text-end">Shares</th>
+            <th scope="col" class="text-end">Price</th>
+            <th scope="col" class="text-end">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for x in userWallet if x["symbol"] != "N/A" %}
+            <tr>
+                <th scope="row" class="text-start">{{ x["symbol"] }}</th>
+                <td class="text-start">{{ x["company"] }}</td>
+                <td class="text-end">{{ x["shares"] }}</td>
+                <td class="text-end">{{ x["price"] }}</td>
+                <td class="text-end">{{ (x["price"] * x["shares"]) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="text-end" colspan="4">User Cash</td>
+                <td class="text-end">{{ userCash }}</td>
+            </tr>
+            <tr>
+                <td class="text-end" colspan="4">Total Cash</td>
+                <td class="text-end">{{ total }}</td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}
