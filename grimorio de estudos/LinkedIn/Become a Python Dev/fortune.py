@@ -1,4 +1,6 @@
 from random import randint
+#import re
+#import string
 
 fortuneSlips = {
     1: "A disaster is coming",
@@ -21,4 +23,23 @@ elif input == "n" or input == "no":
     print("Then what the hell are you doing in a fortune cookie app?")
 else:
     print("...? Sorry?")
+    
+'''     def test(text):
+            return any(x in string.punctuation for x in text) '''
+
+'''         
+def anualBirthsAverage(year, births):
+    avr = 0
+    for x, y in zip(year, births):
+        if avr == 0:
+            avr = births
+        else:
+            avr = round(avr + births // 2)
+        print(f"In the year {x}, there were {y} births, and the running average was {avr}.") '''
+
+'''         
+def palindrome(word):
+    cleanWord = re.sub("\W+", "", word).lower()
+    if cleanWord is reversed(cleanWord):
+        return True '''
     
