@@ -1,0 +1,24 @@
+head, header, body, footer, main, nav {
+    background-color: #D3D0CB;
+}
+
+html {
+    padding: 0rem 5rem 0rem 5rem;
+    background-image: url(https://media.discordapp.net/attachments/773334201801375765/1011307130474725486/E9aZfWKXoAE-2d1.jpg?width=593&height=480);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #393E41; /* Used if the image is unavailable */
+}
+
+header {
+    padding: 1rem 0rem;
+}
+
+nav a, nav button {
+    padding: 0rem 0.5rem;
+}
+
+div.alert {
+    text-align: center;
+}
+
