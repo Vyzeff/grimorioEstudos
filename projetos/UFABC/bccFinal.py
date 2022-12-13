@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 from math import ceil
 from random import randint
+import matplotlib.pyplot as plt
+%matplotlib inline
 
 #Link para a tabela de computadores: https://drive.google.com/uc?export=download&id=1D605NkuC-c5uh5L0iErZ00bFB6wGiz-F
 #Link para tabela de imoveis: https://drive.google.com/uc?export=download&id=1CN8AMb-XoRn5EvpzwKSJHDZiU6mBSHB6
@@ -52,7 +54,31 @@ def csvFindRelations(csvFile = 'computadores_rotulos.csv', csvColumn = 'performa
     #printa a menor correlação achada
     print(f"A menor correlação entre todas com {csvColumn} é aquela de {minCorr}, com uma fraca relação de {corrLista[minCorr]:0.3f}", end="\n \n")
 
-    #se a variavel loop for falsa, executa a função
+    #plotar os valores de csvColumn em x e de maxCorr em y
+    plt.plot(df[csvColumn], df[maxCorr], '.')
+
+    #achar os valores de a e b na reta de ax + b entre as variaveis csvColumn e maxCorr
+    (aVariavel, bVariavel) = np.polyfit(x = df[csvColumn], y = df[maxCorr], deg = 1)
+
+    #gera o inicio e fim de x no grafico com base no valor minimo e maximo de csvColumn
+    x = np.arange(df[csvColumn].min(), df[csvColumn].max())
+
+    #gera os valores de y para a função de regressao ax + b
+    y = aVariavel * x + bVariavel
+
+    #coloca lagendas no grafico e o cria
+    plt.title("Regreção Linear")
+    plt.xlabel(csvColumn)
+    plt.ylabel(maxCorr)
+    plt.plot(x, y)
+
+    print(f"Por fim, segue um gráfico da regressão linear entre {csvColumn} e {maxCorr}, contando que numa reta ax + b, a e b nessa \n reta de regressão seriam {aVariavel:0.3f}x + {bVariavel:0.3f}:")
+
+    #mostra o grafico para o usuario e depois o limpa para o proximo uso
+    plt.show()
+    plt.clf()
+
+    #se a variavel loop for falsa, executa a função novamente com um csvColumn aleatorio
     if loop == False:
         print("Segue, tambem, uma outra relação completamente aleatória.")
         randValue = randint(0, len(nomeColunas) -1)
@@ -60,6 +86,7 @@ def csvFindRelations(csvFile = 'computadores_rotulos.csv', csvColumn = 'performa
     return 0
 
 def main():
+    #espera o input do usuario para a tabela e a csvColumn
     csv = input("Por favor, um csv ou link para csv: ")
     coluna = input("Por fim, digite a coluna desejada para os calculos: ")
     try:
