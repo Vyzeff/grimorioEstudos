@@ -1,0 +1,120 @@
+/*basic
+    #C0CAAD
+    #9DA9A0
+    #654C4F
+    #B26E63
+    #CEC075
+*/
+body
+{
+    background-color: #D4DF9E;
+}
+
+.sidenav
+{
+    background-color: #12100E;
+}
+
+aside
+{
+    background-color: #30321C;
+    color:  #D4DF9E;
+}
+
+.sidenav a
+{
+    color: #dbf558;
+}
+
+.sidenav a:hover
+{
+    color: #dbf558;
+}
+
+#title
+{
+    color: #6B654B;
+}
+
+#side-h
+{
+    color: #6B654B;
+}
+.sidenav p 
+{
+    color: #D4DF9E;
+}
+
+#todoList {
+    background-color: #fff;
+
+}
+
+.todoElement {
+
+    border-top: 1px solid #30321C;
+}
+
+
+.sidenav a
+{
+    color: #D4DF9E;
+}
+
+.sidenav a:hover
+{
+    color: #D4DF9E;
+}
+
+#title
+{
+    color: #6B654B;
+}
+
+#side-h
+{
+    color: #6B654B;
+}
+
+input:invalid 
+{
+    border: rgb(255, 46, 46) solid 1px;
+}
+
+.iscomplete 
+{
+    border: #2196F3;
+}
+
+
+.completed {
+    color: #6B654B;
+}
+
+.btn-secondary {
+    color: #fff;
+    background: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary :hover {
+    color: #fff;
+    background-color: #5c636a;
+}
+
+.switch 
+{
+    border: 2px solid rgb(54, 51, 51);
+}
+
+::placeholder {
+    color: #30321C;
+}
+
+ul#todoList {
+    background: #D4DF9E;
+}
+
+.todoElement {
+    background: #D4DF9E;
+}

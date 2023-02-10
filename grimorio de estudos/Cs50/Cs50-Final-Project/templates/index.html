@@ -1,0 +1,15 @@
+{% extends "layout.html"%}
+
+{% block title%}
+    Home
+{% endblock %}
+
+{% block main%}
+    <div>
+        <form action="/login" method="post">
+            {% if session["user_id"] %}
+                <p>Login successful.</p>
+            {% else %}
+                <p>Please login to access the rest of the website.</p>
+            {% endif %}
+{% endblock%}
