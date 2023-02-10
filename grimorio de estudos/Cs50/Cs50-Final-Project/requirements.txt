@@ -1,7 +1,0 @@
-Flask
-Flask-Session
-requests
-sqlalchemy
-sqlalchemy_utils
-datetime
-helper
